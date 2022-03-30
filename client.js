@@ -19,7 +19,21 @@ function addPurchase(){
     $( '#purchaseNameIn' ).val( '' );
     $( '#purchasePriceIn' ).val( '' );
     //calculate remainingBudget
+    calculateRemainingBudget();
 }//end addPurchase
+
+function calculateRemainingBudget();{
+    console.log( 'in calculateRemainingBudget' );
+    //loop through purchases array
+    let totalPrices = 0;
+    for (let i = 0; i<purchases.length; i++){
+    //for each purchase, add up total of all prices
+    //subtract totalPrices from budget for remainingBudget
+    totalPrices += purchases[ i ].price;
+    }//end for loop
+    console.log( 'totalPrices:', totalPrices);
+ //display remainingBudget
+}//end calculateRemainingBudget
 
 function readyNow(){
 // console.log( 'JQ' );
