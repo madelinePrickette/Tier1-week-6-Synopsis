@@ -3,7 +3,6 @@ console.log( 'js' );
 $( document ).ready( readyNow );
 
 const budget = 25000;
-
 let purchases = [];
 
 function addPurchase(){
